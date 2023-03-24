@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+
+    <title>4 Second Assignment</title>
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm">
+            &nbsp;
+        </div>
+        <div class="col-sm text-center">
+            <h1>4 Second Assignment</h1>
+        </div>
+        <div class="col-sm">
+            &nbsp;
+        </div>
+    <div class="row">
+        <div class="col-sm">
+            &nbsp;
+        </div>
+        <div class="col-sm text-center">
+            <button id="btnTimer" type="button" class="btn btn-outline-dark btn-lg">Start</button>
+        </div>
+        <div class="col-sm">
+            &nbsp;
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm">
+            &nbsp;
+        </div>
+        <div class="col-sm text-center">
+            <label id="seconds"></label>
+        </div>
+        <div class="col-sm">
+            &nbsp;
+        </div>
+    </div>
+        <div class="row">
+            <div class="col-sm">
+                &nbsp;
+            </div>
+            <div class="col-sm text-center">
+                <p id="starting"></p>
+                <p id="ending"></p>
+            </div>
+            <div class="col-sm">
+                &nbsp;
+            </div>
+        </div>
+</div>
+
+
+<script>
+
+    var btn = document.getElementById("btnTimer");
+    btn.addEventListener("click", clicked);
+    var timesClicked = 0;
+    var startDate, stopDate, totalTime;
+    var secondsLabel = document.getElementById("seconds");
+    var timeLogStart = document.getElementById("starting");
+    var timeLogEnd = document.getElementById("ending");
+    //var startOrStop = document.getElementById("startorstop");
+    var currentColor = "btn-outline-dark";
+    var newColor;
+    var info =  [];
+    var tries = 0;
+    function clicked() {
+        timesClicked += 1;
+        if (timesClicked % 2 == 0) {
+            stopDate = new Date();
+            totalTime = (stopDate - startDate) * .001; //milliseconds to seconds
+            totalTime = (Math.round(totalTime * 100) / 100).toFixed(2);
+            btn.innerHTML = "Start";
+            secondsLabel.innerHTML = totalTime + " Seconds";
+
+
+
+
+            if (totalTime == 4) {
+                newColor = "btn-success"
+            } // green
+            else if (totalTime > 3.8 && totalTime < 4.2) {
+                newColor = "btn-primary"
+            } //blue
+            else if (totalTime > 3.5 && totalTime < 4.5) {
+                newColor = "btn-warning"
+            } //yellow
+            else {
+                newColor = "btn-danger"
+            } //red
+
+            //startOrStop.classList.replace("'fa-stop'", "'fa-play'");
+            btn.classList.replace(currentColor, newColor);
+            currentColor = newColor;
+
+            tries += 1;
+
+            let user = {
+                attempt: tries,
+                start: startDate,
+                stop: stopDate
+            };
+
+
+            info.push(user);
+            timeLogStart.innerText = info[tries-1].start;
+            timeLogEnd.innerText = info[tries-1].stop;
+
+        } else {
+            startDate = new Date();
+            btn.innerHTML = "Stop";
+            //startOrStop.classList.replace("fa-play", "fa-stop");
+        }
+    }
+
+
+
+
+
+
+</script>
+
+<!-- Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+</body>
+</html>
