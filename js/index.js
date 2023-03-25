@@ -5,6 +5,10 @@ var startDate, stopDate, totalTime;
 var secondsLabel = document.getElementById("seconds");
 var timeLogStart = document.getElementById("starting");
 var timeLogEnd = document.getElementById("ending");
+var avgScore = document.getElementById("avg");
+var highScore = document.getElementById("hi");
+var lowScore = document.getElementById("lw");
+var loadingChart = document.getElementById("comingSoon");
 var currentColor = "btn-outline-dark";
 var newColor;
 var info = [];
@@ -70,9 +74,27 @@ function clicked() {
 }
 
 function uncharted() {
+
+    var high = Math.max.apply(Math, allScores);
+    var low = Math.min.apply(Math, allScores);
+    var sum = 0;
+
+
+    for(var i = 0; i < allScores.length; i++) {
+        sum += parseFloat(allScores[i]);
+    }
+    var avg = sum / allScores.length;
+
+    avgScore.innerText = avg.toFixed(2);
+    highScore.innerText= high.toFixed(2);
+    lowScore.innerText= low.toFixed(2);
+
+
     for (var i = 0; i < allScores.length; i++) {
         xyValues.push({x: (i + 1), y: allScores[i]});
     }
+
+    loadingChart.innerText = "";
 
     new Chart("myChart", {
         type: "scatter",
@@ -92,4 +114,5 @@ function uncharted() {
         }
     });
 }
+
 
