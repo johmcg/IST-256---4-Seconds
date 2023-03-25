@@ -7,3 +7,10 @@ document.getElementById("toastbtn")
     })
     toastList.forEach(toast => toast.show())
 }
+
+$(document).ready(function(){
+    $(".show-toast").click(function(){
+        $("#myToast").toast({ delay: 10000000 });
+        $("#myToast").toast('show');
+    });
+});
