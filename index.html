@@ -12,6 +12,11 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
 
+    <style>canvas{
+        margin-right: auto;
+        margin-left: auto;
+        display: block;
+    }</style>
 
     <title>4 Second Assignment</title>
 </head>
@@ -30,14 +35,11 @@
             <li class="nav-item">
                 <a class="nav-link" href="#chart">scores</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#/career"></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#/contact"></a>
-            </li>
+
         </ul>
+
     </div>
+    <div class="float-end navbar-brand">4 Seconds</div>
 </nav>
 
 
@@ -58,6 +60,19 @@
                 Attempt:
             </p>
             <p id="attempts"></p>
+            <p>
+                Low:
+            </p>
+            <p id="lw"></p>
+            <p>
+                High:
+            </p>
+            <p id="hi"></p>
+            <p>
+                Average:
+            </p>
+            <p id="avg"></p>
+
             <p>
                 Start:
             </p>
@@ -127,7 +142,7 @@
                 <div class="col-sm text-center">
 
                 </div>
-                <div class="col-sm">
+                <div id="howTo" class="col-sm">
                     &nbsp;
                 </div>
             </div>
@@ -137,22 +152,22 @@
                 &nbsp;
             </div>
             <div class="col-sm">
-                &nbsp;<h1 class="text-center">how to</h1>
+                &nbsp;<h1 class="text-center mb-5">how to</h1>
             </div>
             <div class="col-sm">
                 &nbsp;
             </div>
         </div>
-        <div class="row">
-            <div class="col-sm">
+        <div  class="row">
+            <div class="col-2">
                 &nbsp;
             </div>
-            <div class="col-sm">
+            <div  class="col-8">
                 <div class="text-center">
                     <p>First things first, click start.</p>
                     <p>After you think 4 seconds has passed you by click stop.</p>
                 </div>
-                <table class="table" id="howTo">
+                <table class="table">
                     <thead class="thead-dark">
                     <tr>
                         <th scope="col">Rank</th>
@@ -184,7 +199,7 @@
                     </tbody>
                 </table>
             </div>
-            <div class="col-sm">
+            <div class="col-2">
                 &nbsp;
             </div>
             <div class="row pb-5">
@@ -206,22 +221,23 @@
             </div>
             <div class="col-sm">
                 <h1>scores</h1>
+                <p id="comingSoon">This chart will load when you play a few games.</p>
             </div>
             <div class="col-sm">
                 &nbsp;
             </div>
             <div class="row">
-                <div class="col-2">
+                <div class="col-1">
                     &nbsp;
                 </div>
-                <div class="col-8">
+                <div class="col-10">
                     <canvas id="myChart" style="width:100%;max-width:700px"></canvas>
                 </div>
-                <div class="col-2">
+                <div class="col-1">
                     &nbsp;&nbsp;
                 </div>
             </div>
-            <div class="row"></div>
+            <div class="row mb-5"></div>
             <div class="col-2">
                 &nbsp;
             </div>
@@ -239,9 +255,11 @@
             src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
     </script>
 
+
     <script type="text/javascript" charset="utf-8" src="js/toast.js"></script>
     <script type="text/javascript" charset="utf-8"  src="js/index.js"></script>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 
     <script type="text/javascript" charset="utf-8" src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
             integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
@@ -250,7 +268,7 @@
             integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
             crossorigin="anonymous"></script>
 
-
+</div>
 </body>
 </html>
 
