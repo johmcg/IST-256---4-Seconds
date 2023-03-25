@@ -3,7 +3,7 @@
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -210,17 +210,17 @@
             <div class="col-sm">
                 &nbsp;
             </div>
-        <div class="row">
-            <div class="col-2">
-                &nbsp;
+            <div class="row">
+                <div class="col-2">
+                    &nbsp;
+                </div>
+                <div class="col-8">
+                    <canvas id="myChart" style="width:100%;max-width:700px"></canvas>
+                </div>
+                <div class="col-2">
+                    &nbsp;&nbsp;
+                </div>
             </div>
-            <div class="col-8">
-                <canvas id="myChart" style="width:100%;max-width:700px"></canvas>
-            </div>
-            <div class="col-2">
-                &nbsp;&nbsp;
-            </div>
-        </div>
             <div class="row"></div>
             <div class="col-2">
                 &nbsp;
@@ -231,7 +231,7 @@
             <div class="col-2">
                 &nbsp;
             </div>
-    </div>
+        </div>
     </div>
 
 
@@ -241,40 +241,6 @@
 
     <script src="/src/toast.js"></script>
     <script src="/src/index.js"></script>
-
-
-
-<script>
-
-    function uncharted(){
-    var xyValues = [];
-
-    for (var i=0; i<allScores.length; i++) {
-        xyValues.push({x: (i+1), y: allScores[i]});
-    }
-
-    new Chart("myChart", {
-        type: "scatter",
-        data: {
-            datasets: [{
-                pointRadius: 4,
-                pointBackgroundColor: "rgb(0,0,255)",
-                data: xyValues
-            }]
-        },
-        options: {
-            legend: {display: false},
-            scales: {
-                xAxes: [{ticks: {min: 0, max:25}}],
-                yAxes: [{ticks: {min: 0, max:16}}],
-            }
-        }
-    });}
-</script>
-
-
-
-
 
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"

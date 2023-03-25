@@ -7,7 +7,7 @@ var timeLogStart = document.getElementById("starting");
 var timeLogEnd = document.getElementById("ending");
 var currentColor = "btn-outline-dark";
 var newColor;
-var info =  [];
+var info = [];
 var tries = 0;
 var timesTried = document.getElementById("attempts");
 var allScores = [];
@@ -21,7 +21,6 @@ function clicked() {
         totalTime = (Math.round(totalTime * 100) / 100).toFixed(2); //rounds to two decimal places
         btn.innerHTML = "Start"; //Changes button text
         secondsLabel.innerHTML = totalTime + " Seconds"; //Shows seconds below button
-
 
 
         //This section changes color of button.
@@ -55,8 +54,8 @@ function clicked() {
         info.push(user); //adds to array of user info
 
 
-        timeLogStart.innerText = info[tries-1].start; //changes Start time to Toast Message
-        timeLogEnd.innerText = info[tries-1].stop; //changes Stop time to Toast Message
+        timeLogStart.innerText = info[tries - 1].start; //changes Start time to Toast Message
+        timeLogEnd.innerText = info[tries - 1].stop; //changes Stop time to Toast Message
         timesTried.innerText = tries; //changes attempt number to Toast Message
         allScores.push(totalTime); //adds time to Array keeping track of all times a user got
 
@@ -70,9 +69,9 @@ function clicked() {
     }
 }
 
-function uncharted(){
-    for (var i=0; i<allScores.length; i++) {
-        xyValues.push({x: (i+1), y: allScores[i]});
+function uncharted() {
+    for (var i = 0; i < allScores.length; i++) {
+        xyValues.push({x: (i + 1), y: allScores[i]});
     }
 
     new Chart("myChart", {
@@ -87,9 +86,10 @@ function uncharted(){
         options: {
             legend: {display: false},
             scales: {
-                xAxes: [{ticks: {min: 0, max:25}}],
-                yAxes: [{ticks: {min: 0, max:10}}],
+                xAxes: [{ticks: {min: 0, max: 25}}],
+                yAxes: [{ticks: {min: 0, max: 10}}],
             }
         }
-    });}
+    });
+}
 
