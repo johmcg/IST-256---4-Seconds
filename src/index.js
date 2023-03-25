@@ -11,7 +11,7 @@ var info =  [];
 var tries = 0;
 var timesTried = document.getElementById("attempts");
 var allScores = [];
-
+var xyValues = [];
 
 function clicked() {
     timesClicked += 1;
@@ -60,7 +60,7 @@ function clicked() {
         timesTried.innerText = tries; //changes attempt number to Toast Message
         allScores.push(totalTime); //adds time to Array keeping track of all times a user got
 
-
+        uncharted();
 
     } else { //if even number it is assumed the user just clicked start
         startDate = new Date();
@@ -69,4 +69,27 @@ function clicked() {
 
     }
 }
+
+function uncharted(){
+    for (var i=0; i<allScores.length; i++) {
+        xyValues.push({x: (i+1), y: allScores[i]});
+    }
+
+    new Chart("myChart", {
+        type: "scatter",
+        data: {
+            datasets: [{
+                pointRadius: 4,
+                pointBackgroundColor: "rgb(0,0,255)",
+                data: xyValues
+            }]
+        },
+        options: {
+            legend: {display: false},
+            scales: {
+                xAxes: [{ticks: {min: 0, max:25}}],
+                yAxes: [{ticks: {min: 0, max:10}}],
+            }
+        }
+    });}
 
