@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
 
     <!-- Font Awesome -->
@@ -18,88 +19,33 @@
 <body>
 
 
-<nav class="navbar navbar-dark bg-dark">
-    <div class="container-fluid">
-        <button
-                class="navbar-toggler"
-                type="button"
-
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarToggleExternalContent2"
-                aria-controls="navbarToggleExternalContent1"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-        >
-            <i class="fas fa-bars text-white"></i>
-        </button>
-        <a class="navbar-brand" href="#">4 Second Assignment</a>
+<nav class="navbar fixed-top navbar-expand navbar-dark bg-dark">
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item-active">
+                <a class="nav-link" href="#top">play<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#howTo">how to</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#/services">scores</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#/career"></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#/contact"></a>
+            </li>
+        </ul>
     </div>
 </nav>
-<div class="collapse" id="navbarToggleExternalContent2">
-    <ul class="bg-light shadow-3 py-2 px-3">
-        <li class="btn btn-link btn-block m-0 p-2 text-start text-dark">home</li>
-        <li class="btn btn-link btn-block m-0 p-2 text-start text-dark">chart</li>
-    </ul>
-</div>
 
 
-<div class="container">
-    <div class="row">
-        <div class="col-sm">
-            &nbsp;
-        </div>
-        <div class="col-sm text-center">
-            &nbsp;
-        </div>
-        <div class="col-sm">
-            &nbsp;
-        </div>
-    <div class="row">
-        <div class="col-sm">
-            &nbsp;
-        </div>
-        <div class="col-sm text-center">
-            <button id="btnTimer" type="button" class="btn btn-outline-dark btn-lg">Start</button>
-
-            <button type="button" class="btn btn-secondary"
-                    id="toastbtn">
-                <i class="fa fa-info" aria-hidden="true"></i>
-            </button>
-        </div>
-        <div class="col-sm">
-            &nbsp;
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm">
-            &nbsp;
-        </div>
-        <div class="col-sm text-center">
-            <label id="seconds"></label>
-        </div>
-        <div class="col-sm">
-            &nbsp;
-        </div>
-    </div>
-        <div class="row">
-            <div class="col-sm">
-                &nbsp;
-            </div>
-            <div class="col-sm text-center">
-
-            </div>
-            <div class="col-sm">
-                &nbsp;
-            </div>
-        </div>
-</div>
-
-
-
-
-    <div class="toast">
-        <div class="toast-header">
-            <strong class="me-auto">
+<div aria-live="polite" aria-atomic="true" style="position: relative; min-height: 200px;">
+    <div class="toast" style="position: absolute; top: 30%; right: 5%;">
+        <div class="toast-header ">
+            <strong class="mr-auto">
                 Summary Info
             </strong>
 
@@ -120,100 +66,155 @@
             <p> End:</p>
             <p id="ending"></p>
         </div>
+
     </div>
 </div>
 
-<script>
-    document.getElementById("toastbtn")
-        .onclick = function () {
-        var toastElList = [].slice
-            .call(document.querySelectorAll('.toast'));
-        var toastList = toastElList.map(function (toastEl) {
-            return new bootstrap.Toast(toastEl)
-        })
-        toastList.forEach(toast => toast.show())
-    }
-</script>
+
+<div class="container">
+    <div class="row">
+   </div>
+    <div class="row pb-5 pt-5">
+        <div class="col-sm">
+            &nbsp;
+        </div>
+        <div class="col-sm">
+            &nbsp;<h1 class="text-center">play</h1>
+        </div>
+        <div class="col-sm">
+            &nbsp;
+        </div>    </div>
+    <div class="row">
+        <div class="col-sm">
+            &nbsp;
+        </div>
+        <div class="col-sm text-center">
+            &nbsp;
+        </div>
+        <div class="col-sm">
+            &nbsp;
+        </div>
+        <div class="row pb-5 pt-5">
+            <div class="col-sm">
+                &nbsp;
+            </div>
+            <div class="col-sm text-center">
+                <button id="btnTimer" type="button" class="btn btn-outline-dark btn-lg">Start</button>
+
+                <button type="button" class="btn btn-secondary"
+                        id="toastbtn">
+                    <i class="fa fa-info" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="col-sm">
+                &nbsp;
+            </div>
+            <div class="row">
+                <div class="col-sm">
+                    &nbsp;
+                </div>
+                <div class="col-sm text-center">
+                    <label id="seconds"></label>
+                </div>
+                <div class="col-sm">
+                    &nbsp;
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm">
+                    &nbsp;
+                </div>
+                <div class="col-sm text-center">
+
+                </div>
+                <div class="col-sm">
+                    &nbsp;
+                </div>
+            </div>
+        </div>
+        <div class="row pt-5">
+            <div class="col-sm">
+                &nbsp;
+            </div>
+            <div class="col-sm">
+                &nbsp;<h1 class="text-center">how to</h1>
+            </div>
+            <div class="col-sm">
+                &nbsp;
+            </div>    </div>
+        <div class="row">
+            <div class="col-sm">
+                &nbsp;
+            </div>
+            <div class="col-sm">
+                <div class="text-center">
+                    <p>First things first, click start.</p>
+                    <p>After you think 4 seconds has passed you by click stop.</p>
+                </div>
+                <table class="table" id="howTo">
+                    <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Rank</th>
+                        <th scope="col">Time</th>
+                        <th scope="col">Color</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="text-success">
+                        <th scope="row">Excellent</th>
+                        <td>4 seconds</td>
+                        <td>Green</td>
+                    </tr>
+                    <tr class="text-primary">
+                        <th scope="row">Good</th>
+                        <td>3.8-4.2 seconds</td>
+                        <td>Blue</td>
+                    </tr>
+                    <tr class="text-warning">
+                        <th scope="row">Ok</th>
+                        <td>3.5-4.5</td>
+                        <td>Yellow</td>
+                    </tr>
+                    <tr class="text-danger">
+                        <th scope="row">eh</th>
+                        <td>Sorry</td>
+                        <td>Red</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-sm">
+                &nbsp;
+            </div>
+            <div class="row pb-5">
+                <div class="col-sm">
+                    &nbsp;
+                </div>
+                <div class="col-sm">
+                    &nbsp
+                </div>
+                <div class="col-sm">
+                    &nbsp;
+                </div>    </div>
+            <div class="row pb-5"></div>
+        </div>
+    </div>
 
 
-<script>
-
-    var btn = document.getElementById("btnTimer");
-    btn.addEventListener("click", clicked);
-    var timesClicked = 0;
-    var startDate, stopDate, totalTime;
-    var secondsLabel = document.getElementById("seconds");
-    var timeLogStart = document.getElementById("starting");
-    var timeLogEnd = document.getElementById("ending");
-    //var startOrStop = document.getElementById("startorstop");
-    var currentColor = "btn-outline-dark";
-    var newColor;
-    var info =  [];
-    var tries = 0;
-    var timesTried = document.getElementById("attempts");
 
 
-    function clicked() {
-        timesClicked += 1;
-        if (timesClicked % 2 == 0) {
-            stopDate = new Date();
-            totalTime = (stopDate - startDate) * .001; //milliseconds to seconds
-            totalTime = (Math.round(totalTime * 100) / 100).toFixed(2);
-            btn.innerHTML = "Start";
-            secondsLabel.innerHTML = totalTime + " Seconds";
+        <script src="/src/toast.js"></script>
+        <script src="/src/index.js"></script>
 
 
-
-
-            if (totalTime == 4) {
-                newColor = "btn-success"
-            } // green
-            else if (totalTime > 3.8 && totalTime < 4.2) {
-                newColor = "btn-primary"
-            } //blue
-            else if (totalTime > 3.5 && totalTime < 4.5) {
-                newColor = "btn-warning"
-            } //yellow
-            else {
-                newColor = "btn-danger"
-            } //red
-
-            //startOrStop.classList.replace("'fa-stop'", "'fa-play'");
-            btn.classList.replace(currentColor, newColor);
-            currentColor = newColor;
-
-            tries += 1;
-
-            let user = {
-                attempt: tries,
-                start: startDate,
-                stop: stopDate
-            };
-
-
-            info.push(user);
-
-            attempts
-            timeLogStart.innerText = info[tries-1].start;
-            timeLogEnd.innerText = info[tries-1].stop;
-            timesTried.innerText = tries;
-
-
-
-
-        } else {
-            startDate = new Date();
-            btn.innerHTML = "Stop";
-            //startOrStop.classList.replace("fa-play", "fa-stop");
-
-        }
-    }
-
-</script>
-
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+                integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+                crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+                integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+                crossorigin="anonymous"></script>
 
 
 </body>
 </html>
+
