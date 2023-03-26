@@ -26,7 +26,7 @@ function clicked(event) {
         stopDate = new Date();
         totalTime = (stopDate - startDate) * .001; //milliseconds to seconds
         totalTime = (Math.round(totalTime * 100) / 100).toFixed(2); //rounds to two decimal places
-        btn.innerHTML = "Start"; //Changes button text
+        btn.textContent = "Start"; //Changes button text
         secondsLabel.innerHTML = totalTime + " Seconds"; //Shows seconds below button
 
 
@@ -70,7 +70,7 @@ function clicked(event) {
 
     } else { //if even number it is assumed the user just clicked start
         startDate = new Date();
-        btn.innerHTML = "Stop";
+        btn.textContent = "Stop"; //Changes button text
     }
 }
 
