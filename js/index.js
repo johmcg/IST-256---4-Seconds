@@ -25,7 +25,7 @@ var xyValues = [];
 
 function clicked() {
     timesClicked += 1;
-    if (btn.textContent == "Stop") { //if even number it is assumed the user just clicked stop
+    if (btn.textContent === "Stop") { //if even number it is assumed the user just clicked stop
         stopDate = new Date();
         totalTime = (stopDate - startDate) * .001; //milliseconds to seconds
         totalTime = (Math.round(totalTime * 100) / 100).toFixed(2); //rounds to two decimal places
