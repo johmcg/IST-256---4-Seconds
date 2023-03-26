@@ -1,5 +1,11 @@
 var btn = document.getElementById("btnTimer");
-btn.addEventListener("click", clicked);
+
+
+// First we check if you support touch, otherwise it's click:
+let touchEvent = 'ontouchstart' in window ? 'touchstart' : 'click';
+btn.addEventListener(touchEvent, clicked);
+
+
 var timesClicked = 0;
 var startDate, stopDate, totalTime;
 var secondsLabel = document.getElementById("seconds");
