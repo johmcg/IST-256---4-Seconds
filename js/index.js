@@ -1,4 +1,5 @@
 var btn = document.getElementById("btnTimer");
+btn.addEventListener("touchstart", clicked);
 btn.addEventListener("click", clicked);
 var timesClicked = 0;
 var startDate, stopDate, totalTime;
