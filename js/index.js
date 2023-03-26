@@ -1,5 +1,5 @@
 var btn = document.getElementById("btnTimer");
-btn.addEventListener("touchstart", clicked(event));
+btn.addEventListener("click", clicked(event));
 var timesClicked = 0;
 var startDate, stopDate, totalTime;
 var secondsLabel = document.getElementById("seconds");
