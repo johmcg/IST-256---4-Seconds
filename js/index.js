@@ -1,5 +1,6 @@
 var btn = document.getElementById("btnTimer");
 btn.addEventListener("click", clicked);
+btn.addEventListener("touchstart", clicked);
 var timesClicked = 0;
 var startDate, stopDate, totalTime;
 var secondsLabel = document.getElementById("seconds");
@@ -18,7 +19,8 @@ var timesTried = document.getElementById("attempts");
 var allScores = [];
 var xyValues = [];
 
-function clicked() {
+function clicked(event) {
+    event.preventDefault();
     timesClicked += 1;
     if (timesClicked % 2 == 0) { //if even number it is assumed the user just clicked stop
         stopDate = new Date();
