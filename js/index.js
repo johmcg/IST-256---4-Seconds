@@ -1,7 +1,7 @@
 var btn = document.getElementById("btnTimer");
 btn.addEventListener("click", clicked);
 if (isMobileDevice()) {
-  btn.addEventListener("touchend", clicked);
+  btn.addEventListener("touchstart", clicked);
 }
 var timesClicked = 0;
 var startDate, stopDate, totalTime;
