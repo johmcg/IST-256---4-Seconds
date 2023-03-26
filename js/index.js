@@ -9,7 +9,6 @@ var avgScore = document.getElementById("avg");
 var highScore = document.getElementById("hi");
 var lowScore = document.getElementById("lw");
 var loadingChart = document.getElementById("comingSoon");
-var playIcon = document.getElementById("play");
 var currentColor = "btn-outline-dark";
 var newColor;
 var info = [];
