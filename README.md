@@ -12,4 +12,4 @@ Try and click stop in 4 seconds.
 https://johmcg.github.io/IST-256---4-Seconds/
 
 ## Images
-![Picture](/screenshot.png)
+![Picture](/img/screenshot.png)
