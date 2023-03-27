@@ -1,12 +1,4 @@
-canvas {
-    margin-right: auto;
-    margin-left: auto;
-    display: block;
-}
-
-
-@media (max-width: 767px) {
-
+@include media-breakpoint-up(sm) {
     #toastDevice {
         display: none
     }
@@ -14,13 +6,16 @@ canvas {
     #toastbtn {
         display: none
     }
-
-
 }
+@include media-breakpoint-up(md) {
+	    #toastDevice {
+        display: none
+    }
 
-
-@media (min-width: 1025px) {
-    #toastDevice {
+    #toastbtn {
+        display: none
+    }}
+@include media-breakpoint-up(lg) {  #toastDevice {
         position: relative;
         min-height: 200px;
     }
@@ -42,5 +37,68 @@ canvas {
     #navStat {
         display: none
     }
+ }
+@include media-breakpoint-up(xl) {  #toastDevice {
+        position: relative;
+        min-height: 200px;
+    }
 
+    .toast {
+        position: absolute;
+        top: 30%;
+        right: 5%;
+    }
+
+    #stats {
+        display: none
+    }
+
+    #statHeader {
+        display: none
+    }
+
+    #navStat {
+        display: none
+    }
+}
+@include media-breakpoint-up(xxl) {  #toastDevice {
+        position: relative;
+        min-height: 200px;
+    }
+
+    .toast {
+        position: absolute;
+        top: 30%;
+        right: 5%;
+    }
+
+    #stats {
+        display: none
+    }
+
+    #statHeader {
+        display: none
+    }
+
+    #navStat {
+        display: none
+    }
+ }
+
+// Usage
+
+// Example: Hide starting at `min-width: 0`, and then show at the `sm` breakpoint
+.custom-class {
+  display: none;
+}
+@include media-breakpoint-up(sm) {
+  .custom-class {
+    display: block;
+  }
+}
+
+canvas {
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
 }
