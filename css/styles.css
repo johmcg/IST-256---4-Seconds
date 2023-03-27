@@ -1,0 +1,46 @@
+canvas {
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+}
+
+
+@media (max-width: 767px) {
+
+    #toastDevice {
+        display: none
+    }
+
+    #toastbtn {
+        display: none
+    }
+
+
+}
+
+
+@media (min-width: 1025px) {
+    #toastDevice {
+        position: relative;
+        min-height: 200px;
+    }
+
+    .toast {
+        position: absolute;
+        top: 30%;
+        right: 5%;
+    }
+
+    #stats {
+        display: none
+    }
+
+    #statHeader {
+        display: none
+    }
+
+    #navStat {
+        display: none
+    }
+
+}
