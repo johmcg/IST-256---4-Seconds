@@ -1,3 +1,13 @@
+html, body {
+    height: 100%;
+}
+
+.full-page {
+    height: 100vh;
+    width: 100vw;
+}
+
+
 canvas {
     margin-right: auto;
     margin-left: auto;
@@ -7,9 +17,14 @@ canvas {
 
 @media (max-width: 767px) {
 
-    #toastDevice, #toastbtn {
+    #toastDevice {
         display: none
     }
+
+    #toastbtn {
+        display: none
+    }
+
 
 }
 
@@ -26,7 +41,15 @@ canvas {
         right: 5%;
     }
 
-    #stats, #statHeader, #navStat{
+    #stats {
+        display: none
+    }
+
+    #statHeader {
+        display: none
+    }
+
+    #navStat {
         display: none
     }
 

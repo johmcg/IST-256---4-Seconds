@@ -69,201 +69,117 @@
 </div><!-- toast -->
 
 
-<div class="container">
-    <div class="row pb-5 pt-5">
-        <div class="col-sm">
-            &nbsp;
+
+<section class="h-100 text-center">
+    <header class="container h-100">
+        <div class="row d-flex align-items-center justify-content-center h-100 mb-2">
+            <div class="d-flex flex-column">
+                <div class="text align-self-center p-2">
+                    <h1>play</h1>
+                </div>
+                <div class="text align-self-center p-2">
+                    <button id="btnTimer" type="button" class="btn btn-outline-dark btn-lg">Start</button>
+
+                    <button type="button" class="btn btn-secondary"
+                            id="toastbtn">
+                        <i class="fas fa-info" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <div class="text align-self-center p-2">
+                    <label id="seconds"></label>
+                </div>
+            </div>
         </div>
-        <div class="col-sm">
-            &nbsp;<h1 class="text-center">play</h1>
+        <div class="row d-flex align-items-center justify-content-center h-100" id="howTo">
+            <div class="d-flex flex-column" >
+                <div class="text align-self-center p-2">
+                    <h1 class="mb-5" >how to</h1>
+                    <p >First things first, click start.</p>
+                    <p>After you think 4 seconds has passed you by click stop.</p>
+                </div>
+                <div class="text align-self-center p-2">
+                    <table class="table">
+                        <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Rank</th>
+                            <th scope="col">Time</th>
+                            <th scope="col">Color</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr class="text-success">
+                            <th scope="row">Excellent</th>
+                            <td>4 seconds</td>
+                            <td>Green</td>
+                        </tr>
+                        <tr class="text-primary">
+                            <th scope="row">Good</th>
+                            <td>3.8-4.2 seconds</td>
+                            <td>Blue</td>
+                        </tr>
+                        <tr class="text-warning">
+                            <th scope="row">Ok</th>
+                            <td>3.5-4.5</td>
+                            <td>Yellow</td>
+                        </tr>
+                        <tr class="text-danger">
+                            <th scope="row">eh</th>
+                            <td>Sorry</td>
+                            <td>Red</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div> <!-- rank table  -->
+            </div>
+        </div> <!-- rank table and howto -->
+        <div class="row d-flex align-items-center justify-content-center h-100" id="chart">
+            <div class="d-flex flex-column">
+                <div class="text align-self-center p-2">
+                    <h1>scores</h1>
+                    <p id="comingSoon">No Scores Yet</p>
+                </div>
+                <div class="text align-self-center p-2">
+                    <canvas id="myChart" style="width:100%;max-width:700px"></canvas>
+                </div>
+            </div>
+        </div> <!-- chart  -->
+        <div class="row d-flex align-items-center justify-content-center h-100" id="bottom">
+            <div class="d-flex flex-column">
+                <div class="text align-self-center p-2">
+                    <h1 id="statHeader">stats</h1>
+                    <div id="stats" class="col-12">
+                        you gotta play
+                    </div>
+                </div>
+
+            </div>
         </div>
-        <div class="col-sm">
-            &nbsp;
-        </div>
-    </div><!-- play header -->
+    </header>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <div class="row">
-        <div class="col-sm">
-            &nbsp;
-        </div>
-        <div class="col-sm text-center">
-            &nbsp;
-        </div>
-        <div class="col-sm">
-            &nbsp;
-        </div>
-    </div>
-    <div class="row pb-5 pt-5">
-        <div class="col-sm">
-            &nbsp;
-        </div>
-        <a class="col-sm text-center">
-            <button id="btnTimer" type="button" class="btn btn-outline-dark btn-lg">Start</button>
 
-            <button type="button" class="btn btn-secondary"
-                    id="toastbtn">
-                <i class="fas fa-info" aria-hidden="true"></i>
-            </button>
-        </a>
-        <div class="col-sm">
-            &nbsp;
-        </div>
-    </div><!-- button and info -->
-    <div class="row">
-        <div class="col-sm">
-            &nbsp;
-        </div>
-        <div class="col-sm text-center">
-            <label id="seconds"></label>
-        </div>
-        <div class="col-sm">
-            &nbsp;
-        </div>
-    </div><!-- seconds -->
-    <div class="row">
-        <div class="col-sm">
-            &nbsp;
-        </div>
-        <div class="col-sm text-center">
-
-        </div>
-        <div id="howTo" class="col-sm">
-            &nbsp;
-        </div>
-    </div>
-    <div class="row pt-5">
-        <div class="col-sm">
-            &nbsp;
-        </div>
-        <div class="col-sm">
-            &nbsp;<h1 class="text-center mb-5">how to</h1>
-        </div>
-        <div class="col-sm">
-            &nbsp;
-        </div>
-    </div><!-- howto header -->
-    <div class="row">
-        <div class="col-2">
-            &nbsp;
-        </div>
-        <div class="col-8">
-            <div class="text-center">
-                <p>First things first, click start.</p>
-                <p>After you think 4 seconds has passed you by click stop.</p>
-            </div>
-            <table class="table">
-                <thead class="thead-dark">
-                <tr>
-                    <th scope="col">Rank</th>
-                    <th scope="col">Time</th>
-                    <th scope="col">Color</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr class="text-success">
-                    <th scope="row">Excellent</th>
-                    <td>4 seconds</td>
-                    <td>Green</td>
-                </tr>
-                <tr class="text-primary">
-                    <th scope="row">Good</th>
-                    <td>3.8-4.2 seconds</td>
-                    <td>Blue</td>
-                </tr>
-                <tr class="text-warning">
-                    <th scope="row">Ok</th>
-                    <td>3.5-4.5</td>
-                    <td>Yellow</td>
-                </tr>
-                <tr class="text-danger">
-                    <th scope="row">eh</th>
-                    <td>Sorry</td>
-                    <td>Red</td>
-                </tr>
-                </tbody>
-            </table>
-        </div>
-        <div class="col-2">
-            &nbsp;
-        </div>
-    </div> <!-- instructions and table  -->
-    <div class="row pb-5" id="chart">
-        <div class="col-sm">
-            &nbsp;
-        </div>
-        <div class="col-sm">
-            &nbsp;
-        </div>
-        <div class="col-sm">
-            &nbsp;
-        </div>
-    </div>
-    <div class="row pb-3"></div>
-    <div class="row pb-5 pt-5">
-        <div class="col-12">
-            &nbsp;
-        </div>
-        <div class="row text-center align">
-
-            <div class="col-12">
-                <h1>scores</h1>
-                <p id="comingSoon">No Scores Yet</p>
-            </div>
-
-        </div><!-- chart info  -->
-        <div class="row">
-            <div class="col-1">
-                &nbsp;
-            </div>
-            <div class="col-10">
-                <canvas id="myChart" style="width:100%;max-width:700px"></canvas>
-            </div>
-            <div class="col-1">
-                &nbsp;&nbsp;
-            </div>
-        </div> <!-- chart -->
-        <div class="row pb-5 pt-5">
-            <div class="col-12">
-                &nbsp;
-            </div>
-        </div>
-        <div class="row pb-5 pt-5">
-            <div class="col-12">
-                &nbsp;
-            </div>
-        </div>
-        <div class="row pb-5">
-            <div class="col-2">
-                &nbsp;
-            </div>
-            <div class="col-2">
-                &nbsp;
-            </div>
-            <div class="col-2">
-                &nbsp;
-            </div>
-        </div>
-        <div class="row text-center pt-5">
-            <h1 id="statHeader">stats</h1>
-            <div id="stats" class="col-12">
-                you gotta play
-            </div>
-        </div>
-        <div class="row pb-5 pt-5">
-            <div class="col-sm">
-                &nbsp;
-            </div>
-            <div class="col-sm">
-                &nbsp;
-            </div>
-            <div id="bottom" class="col-sm">
-                &nbsp;
-            </div>
-        </div>
-
-    </div>
+    </div> <!--stats-->
 
 
-</div>
+
+
+
+
 
 
 <script type="text/javascript" charset="utf-8"
